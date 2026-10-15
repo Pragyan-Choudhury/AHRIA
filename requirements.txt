@@ -4,6 +4,24 @@
 # MCP framework
 mcp>=1.27.1
 
+# HTTP transport for agent loop (clients/base.py — DimOS httpx pattern)
+httpx>=0.27.0
+
+# Ollama agent loop (clients/base.py — direct SDK)
+ollama>=0.3.0
+
+# LangChain / LangGraph agent loop (clients/mcp_client.py — DimOS McpClient pattern)
+langchain>=0.3.0
+langchain-core>=0.3.0
+langgraph>=0.2.0
+
+# Ollama support for HarcMcpClient (model="ollama:llama3.2")
+langchain-ollama>=0.2.0
+
+# OpenAI support for HarcMcpClient (model="gpt-4o") — optional
+# Requires OPENAI_API_KEY environment variable
+# langchain-openai>=0.2.0
+
 # Go2 WebRTC SDK
 unitree_webrtc_connect_leshy>=2.0.7
 
@@ -11,3 +29,12 @@ unitree_webrtc_connect_leshy>=2.0.7
 # Install separately if you have G1:
 #   pip install unitree_sdk2py
 # unitree_sdk2py
+
+# Optional: Rubojudo behavior backend for robot action orchestration
+# Install separately if you want to enable the adapter.
+# The package name may differ depending on the source.
+# Examples:
+#   pip install rubojudo
+#   pip install -e /path/to/rubojudo
+#   pip install --index-url https://your-private-index.example/simple rubojudo
+# rubojudo
